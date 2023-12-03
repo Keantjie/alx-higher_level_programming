@@ -3,13 +3,13 @@
 #include "lists.h"
 
 /**
- * print_listint - prints all elements of a list_t list
+ * print_listint - prints all elements of a listint_t list
  * @h: pointer to head of list
  * Return: number of nodes
  */
-size_t print_listint(const list_t *h)
+size_t print_listint(const listint_t *h)
 {
-	const list_t *current;
+	const listint_t *current;
 	unsigned int n;
 
 	current = h;
@@ -24,16 +24,16 @@ size_t print_listint(const list_t *h)
 }
 
 /**
- * add_nodeint - adds a new node at the beginning of a list_t list
+ * add_nodeint - adds a new node at the beginning of a listint_t list
  * @head: pointer to a pointer of the start of the list
  * @n: integer to be included in node
  * Return: address of the new element or NULL if it fails
  */
-list_t *add_nodeint(list_t **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-	list_t *new;
+	listint_t *new;
 
-	new = malloc(sizeof(list_t));
+	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 	{
 		return (NULL);
@@ -45,13 +45,13 @@ list_t *add_nodeint(list_t **head, const int n)
 }
 
 /**
- * free_listint - frees a list_t list
+ * free_listint - frees a listint_t list
  * @head: pointer to list to be freed
  * Return: void
  */
-void free_listint(list_t *head)
+void free_listint(listint_t *head)
 {
-	list_t *current;
+	listint_t *current;
 
 	while (head != NULL)
 	{
