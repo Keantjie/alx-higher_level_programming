@@ -3,7 +3,7 @@ from sys import argv
 
 def main():
     sum = 0
-    for i in aargv[1:]:
+    for i in argv[1:]:
         sum += int(i)
         print("{:d}".format(sum))
 
