@@ -4,7 +4,7 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle coming from BaseGeometry class"""
+    """Rectangle class resulting from BaseGeometry class"""
     def __init__(self, width, height):
         """initializes new object of Rectangle Class"""
         super().integer_validator("width", width)
@@ -21,7 +21,7 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
-    """Square class coming from Rectangle."""
+    """Square class resulting from Rectangle class"""
     def __init__(self, size):
         """initializes new object of Rectangle Class"""
         self.integer_validator("size", size)
