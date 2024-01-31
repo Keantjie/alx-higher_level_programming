@@ -1,25 +1,18 @@
 #!/usr/bin/python3
-"""
-module for matrix maths
-"""
+"""Defines a name-printing function."""
 
 
-def matrix_divided(matrix, div):
-    """ divides matrix by input divisor"""
-    if div == 0:
-        raise ZeroDivisionError('division by zero')
-    if not isinstance(div, (int, float)):
-        raise TypeError('div must be a number')
-    new = []
-    rowlen = len(matrix[0])
-    for row in matrix:
-        sub = []
-        if len(row) != rowlen:
-            raise TypeError('Each row of the matrix must have the same size')
-        for i in range(len(row)):
-            if not isinstance(row[i], (int, float)):
-                raise TypeError('matrix must be a matrix (list of lists) of '
-                                'integers/floats')
-            sub.append(round((row[i] / div), 2))
-        new.append(sub)
-    return new
+def say_my_name(first_name, last_name=""):
+    """Print a name.
+
+    Args:
+        first_name (str): The first name to print.
+        last_name (str): The last name to print.
+    Raises:
+        TypeError: If either of first_name or last_name are not strings.
+    """
+    if not isinstance(first_name, str):
+        raise TypeError("first_name must be a string")
+    if not isinstance(last_name, str):
+        raise TypeError("last_name must be a string")
+    print("My name is {} {}".format(first_name, last_name))
