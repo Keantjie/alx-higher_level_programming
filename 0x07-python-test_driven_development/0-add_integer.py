@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-"""
-module with 1 function, add integers
-"""
 
 
-def add_integer(a, b):
-    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-        return int(a) + int(b)
-    else:
-        raise TypeError("{:} must be an integer"
-                        .format('b' if isinstance(a, (int, float)) else 'a'))
+def add_integer(a, b=98):
+
+    if ((not isinstance(a, int) and not isinstance(a, float))):
+        raise TypeError("a must be an integer")
+    if ((not isinstance(b, int) and not isinstance(b, float))):
+        raise TypeError("b must be an integer")
+    return (int(a) + int(b))
